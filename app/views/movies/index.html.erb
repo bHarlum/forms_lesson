@@ -1,0 +1,10 @@
+<h1>My Movies</h1>
+
+<ul>
+    <% @movies.each do |ele| %>
+        <li><%="#{ele["title"]}: #{ele["rating"]}"%></li>
+    <% end %>
+</ul>
+<div>
+    <%= link_to("create new movie", new_movie_path)%>
+</div>

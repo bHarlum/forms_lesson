@@ -1,0 +1,13 @@
+<h1>Create a new movie.</h1>
+
+<form action="<%= movies_path %>" method="POST">
+    <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token"/>
+
+    <label for="title">Title</label>
+    <input type="text" name="movie[title]" id="title"/>
+    
+    <label for="rating">Rating</label>
+    <input type="number" placeholder="1-10" min="1" max="10" name="movie[rating]" id="rating"/>
+
+    <input type="submit" value="create new movie"/>
+</form>
